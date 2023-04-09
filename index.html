@@ -1,0 +1,60 @@
+<html>
+	<head>
+		<title> Nothing Serious </title>
+	</head>
+    <style>
+        body{
+        display: grid;
+        place-items: center;
+        min-height: 100dvh;
+        overflow: hidden;
+    }
+    .box{
+        position: relative;
+        transform-style: preserve-3d;
+        transform: rotateX(30deg) rotateY(10deg) perspective(5000px);
+        animation: spin 10s infinite linear;
+    }
+    @keyframes spin{
+        from{
+            transform: rotateX(0deg) rotateY(0deg);
+        }
+        to{
+            transform: rotateX(360deg) rotateY(360deg);
+        }
+    }
+    .front, .back, .right, .left, .top, .bottom{
+            height: 100px;
+            width: 100px;
+            box-shadow: 0 0 20px 1px gray inset;
+            position: absolute;
+            
+            background-color: rgba(245,200,235, 0.75);
+    }
+    .back{
+        transform: translateZ(-100px);
+    }
+    .right{
+        transform: rotateY(90deg) translateX(50px) translateZ(50px);
+    }
+    .left{
+        transform: rotateY(90deg) translateX(50px) translateZ(-50px);
+    }
+    .top{
+        transform: rotateY(90deg) translateX(50px) translateY(-50px) rotateX(90deg);
+    }
+    .bottom{
+        transform: rotateY(90deg) translateX(50px) translateY(50px) rotateX(90deg);
+    }
+    </style>
+	<body>
+		<div class="box">
+			<div class="front"></div>
+			<div class="back"></div>
+			<div class="right"></div>
+			<div class="left"></div>
+			<div class="top"></div>
+			<div class="bottom"></div>
+		</div>
+    </body>
+</html>
