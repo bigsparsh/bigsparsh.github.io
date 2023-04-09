@@ -6,45 +6,102 @@
 		<title> Nothing Serious </title>
 	</head>
     <style>
-        *{
-		font-family: Verdana;
-		margin: 0;
-	}
-	li{
-		font-weight: 600;
-		list-style: none;
-	}
-	nav{
-		transition: 2s;
-		background: #4a171e;
-		display: flex;
-		justify-content: space-evenly;
-		align-items: center;
-		padding: 20px;
-		color: white;
-		border-radius: 0 0 30px 30px;
-	}
-	body{
-		background: #e6dadc;
-	}
+    *{
+        font-family: Verdana;
+        margin: 0;
+    }
+    li{
+        font-weight: 600;
+        list-style: none;
+    }
+    nav{
+        transition: 2s;
+        background: #4a171e;
+        padding: 20px;
+        color: white;
+        overflow: hidden;
+        border-radius: 0 0 30px 30px;
+    }
+    #lnks{
+        transition: 2s;
+        background: #4a171e;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 20px;
+        color: white;
+        border-radius: 0 0 30px 30px;
+    }
+    body{
+        background: #e6dadc;
+    }
 
-	@media screen and (max-width: 450px){
-		nav{
-			flex-direction: column;
-			justify-content: center;
-			align-items: space-evenly;
-		}
-		li{
-			margin-bottom: 10px;
-		}
-	}
+
+    .menu-bar{
+        display: none;
+    }
+    .line{
+        --height-line: 5px;
+        --width-line: 35px;
+        height: var(--height-line);
+        width: var(--width-line);
+        border-radius: 10px;
+        background-color: white;
+        transition: 0.5s ease-in-out;
+        margin-bottom: 5px;
+    }
+    #lnks.appear{
+        display: block;
+    }
+
+    .menu-bar:hover > .b{
+        opacity: 0;
+    }
+    .menu-bar:hover > .a{
+        transform: translateY(10px) rotateZ(45deg);
+    }
+    .menu-bar:hover > .c{
+        transform: translateY(-10px) rotateZ(-45deg);
+    }
+    @media screen and (max-width: 450px){
+        #lnks{
+            flex-direction: column;
+            justify-content: center;
+            align-items: space-evenly;
+            transition: 2s;
+            background: #4a171e;
+            display: none;
+            padding: 20px;
+            color: white;
+            border-radius: 0 0 30px 30px;
+        }
+        li{
+            float: none;
+            margin-bottom: 10px;
+        }
+        .menu-bar{
+            display: block;
+        }
+    }
     </style>
 	<body>
 		<nav>
-			<li>Home</li>
-			<li>About us</li>
-			<li>Contact us</li>
-			<li>More info</li>
-		</nav>
+            <div class="menu-bar" onclick="af();">
+                <div class="line a"></div>
+                <div class="line b"></div>
+                <div class="line c"></div>
+            </div>
+            <div id="lnks">
+                <li>Home</li>
+                <li>About us</li>
+                <li>Contact us</li>
+                <li>More info</li>
+            </div>
+        </nav>
+        <script>
+            function af(){
+                document.getElementById("lnks").classList.toggle("appear");
+            }
+        </script>
     </body>
 </html>
