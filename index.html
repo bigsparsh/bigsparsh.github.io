@@ -1,107 +1,105 @@
 <html>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<head>
-		<title> Nothing Serious </title>
-	</head>
+<head>
+	<title>
+		Form Using HTML
+	</title>
     <style>
-    *{
-        font-family: Verdana;
-        margin: 0;
-    }
-    li{
-        font-weight: 600;
-        list-style: none;
-    }
-    nav{
-        transition: 2s;
-        background: #4a171e;
-        padding: 20px;
-        color: white;
-        overflow: hidden;
-        border-radius: 0 0 30px 30px;
-    }
-    #lnks{
-        transition: 2s;
-        background: #4a171e;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        padding: 20px;
-        color: white;
-        border-radius: 0 0 30px 30px;
-    }
-    body{
-        background: #e6dadc;
-    }
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;800&display=swap');
 
+*{
+	margin: 0;
+	user-select: none;
+}
+body{
+	background-image:
+    radial-gradient(#0000, #000 100%),
+    repeating-conic-gradient(
+      from 45deg,
+      #1f194d 0deg 90deg,
+      #352a85 90deg 180deg);
+  background-size: 100%,  200px 200px;
+	backdrop-filter: blur(9px);
+}
+header{
+	font-family: sans-serif;
+	padding: 20px 0;
+	font-size: 50px;
+	font-family: 'Montserrat', sans-serif;
+	text-align: center;
+	color: white;
+	background-color: #363885;
+}
 
-    .menu-bar{
-        display: none;
-    }
-    .line{
-        --height-line: 5px;
-        --width-line: 35px;
-        height: var(--height-line);
-        width: var(--width-line);
-        border-radius: 10px;
-        background-color: white;
-        transition: 0.5s ease-in-out;
-        margin-bottom: 5px;
-    }
-    #lnks.appear{
-        display: block;
-    }
+.main{
+	display: flex;
+	margin: 100px 0;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.main img{
+	
+	margin: 30px;
+	border-radius: 10px;
+}
 
-    .menu-bar:hover > .b{
-        opacity: 0;
-    }
-    .menu-bar:hover > .a{
-        transform: translateY(10px) rotateZ(45deg);
-    }
-    .menu-bar:hover > .c{
-        transform: translateY(-10px) rotateZ(-45deg);
-    }
-    @media screen and (max-width: 450px){
-        #lnks{
-            flex-direction: column;
-            justify-content: center;
-            align-items: space-evenly;
-            transition: 2s;
-            background: #4a171e;
-            display: none;
-            padding: 20px;
-            color: white;
-            border-radius: 0 0 30px 30px;
-        }
-        li{
-            float: none;
-            margin-bottom: 10px;
-        }
-        .menu-bar{
-            display: block;
-        }
-    }
-    </style>
-	<body>
-		<nav>
-            <div class="menu-bar" onclick="af();">
-                <div class="line a"></div>
-                <div class="line b"></div>
-                <div class="line c"></div>
-            </div>
-            <div id="lnks">
-                <li>Home</li>
-                <li>About us</li>
-                <li>Contact us</li>
-                <li>More info</li>
-            </div>
-        </nav>
-        <script>
-            function af(){
-                document.getElementById("lnks").classList.toggle("appear");
-            }
-        </script>
-    </body>
+footer{
+	font-family: sans-serif;
+	position: static;
+	width: 100%;
+	bottom: 0;
+	padding: 20px 0;
+	font-size: 20px;
+	font-family: 'Montserrat', sans-serif;
+	text-align: center;
+	color: white;
+	background-color: #363885;
+}
+
+.card{
+	background-color: #2d2e63;
+	border-radius: 20px;
+	width:505px;
+	margin: 20px;
+	box-shadow: 0 0 20px black;
+}
+.card p{
+	margin: -10px 40px 40px 40px;
+	font-family: 'Montserrat', sans-serif;
+	text-align: justify;
+	color: white;
+	
+}
+        </style>
+</head>
+<body>
+	<header>
+        Image Gallery
+    </header>
+    <div class="main">
+        <div class="card">
+            <img src="https://wallpaperaccess.com/full/31189.jpg" height="250px">
+            <p>
+                These are the spring fields of somewhere you have never heard of
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque ipsum ea aperiam ducimus doloremque in natus et voluptatum beatae eius, recusandae ipsam eum praesentium impedit magni porro doloribus quas quidem?
+            </p>
+        </div>
+        <div class="card">
+            <img src="https://wallpaperaccess.com/full/31190.jpg" height="250px">
+            <p>
+                These are the spring fields of somewhere you have never heard of
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque ipsum ea aperiam ducimus doloremque in natus et voluptatum beatae eius, recusandae ipsam eum praesentium impedit magni porro doloribus quas quidem?
+            </p>
+        </div>
+        <div class="card">
+            <img src="https://wallpaperaccess.com/full/31191.jpg" height="250px">
+            <p>
+                These are the spring fields of somewhere you have never heard of
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque ipsum ea aperiam ducimus doloremque in natus et voluptatum beatae eius, recusandae ipsam eum praesentium impedit magni porro doloribus quas quidem?
+            </p>
+        </div>
+    </div>
+    <footer>
+        All copyrights Reserved 2023 by Sparsh Singh
+    </footer>
+</body>
 </html>
