@@ -14,11 +14,11 @@
 	transition: left .1s, top .1s, background .1s, border .1s, transform .25s;
 	height: 30px;
 	z-index: 2;
-  pointer-events: none;
+  	pointer-events: none;
 	width: 30px;
 	left: -100px;
 	position: absolute;
-	border: 5px solid white;
+	border: 2.5px solid white;
 	border-radius: 100%;
 }
 
