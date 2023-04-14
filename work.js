@@ -9,8 +9,6 @@ let x, y;
 document.addEventListener('mousemove', (e) =>{
 	x = e.clientX;
 	y = e.clientY;
-	console.log(x);
-	console.log(y);
 	box.setProperty("left", (x-20)+"px");
 	box.setProperty("top", (y-20)+"px");
 })
