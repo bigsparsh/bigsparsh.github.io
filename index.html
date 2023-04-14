@@ -3,103 +3,40 @@
 	<title>
 		Form Using HTML
 	</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;800&display=swap');
-
-*{
-	margin: 0;
-	user-select: none;
-}
-body{
-	background-image:
-    radial-gradient(#0000, #000 100%),
-    repeating-conic-gradient(
-      from 45deg,
-      #1f194d 0deg 90deg,
-      #352a85 90deg 180deg);
-  background-size: 100%,  200px 200px;
-	backdrop-filter: blur(9px);
-}
-header{
-	font-family: sans-serif;
-	padding: 20px 0;
-	font-size: 50px;
-	font-family: 'Montserrat', sans-serif;
-	text-align: center;
-	color: white;
-	background-color: #363885;
-}
-
-.main{
-	display: flex;
-	margin: 100px 0;
-	justify-content: center;
-	flex-wrap: wrap;
-}
-.main img{
-	
-	margin: 30px;
-	border-radius: 10px;
-}
-
-footer{
-	font-family: sans-serif;
-	position: static;
-	width: 100%;
-	bottom: 0;
-	padding: 20px 0;
-	font-size: 20px;
-	font-family: 'Montserrat', sans-serif;
-	text-align: center;
-	color: white;
-	background-color: #363885;
-}
-
-.card{
-	background-color: #2d2e63;
-	border-radius: 20px;
-	width:505px;
-	margin: 20px;
-	box-shadow: 0 0 20px black;
-}
-.card p{
-	margin: -10px 40px 40px 40px;
-	font-family: 'Montserrat', sans-serif;
-	text-align: justify;
-	color: white;
-	
-}
-        </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-	<header>
-        Image Gallery
-    </header>
-    <div class="main">
-        <div class="card">
-            <img src="https://wallpaperaccess.com/full/31189.jpg" height="250px">
-            <p>
-                These are the spring fields of somewhere you have never heard of
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque ipsum ea aperiam ducimus doloremque in natus et voluptatum beatae eius, recusandae ipsam eum praesentium impedit magni porro doloribus quas quidem?
-            </p>
-        </div>
-        <div class="card">
-            <img src="https://wallpaperaccess.com/full/31190.jpg" height="250px">
-            <p>
-                These are the spring fields of somewhere you have never heard of
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque ipsum ea aperiam ducimus doloremque in natus et voluptatum beatae eius, recusandae ipsam eum praesentium impedit magni porro doloribus quas quidem?
-            </p>
-        </div>
-        <div class="card">
-            <img src="https://wallpaperaccess.com/full/31191.jpg" height="250px">
-            <p>
-                These are the spring fields of somewhere you have never heard of
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque ipsum ea aperiam ducimus doloremque in natus et voluptatum beatae eius, recusandae ipsam eum praesentium impedit magni porro doloribus quas quidem?
-            </p>
-        </div>
-    </div>
-    <footer>
-        All copyrights Reserved 2023 by Sparsh Singh
-    </footer>
+	<div class="menu-bar">
+		<img src="https://www.svgrepo.com/show/60423/cancel.svg" class="cancel" height="50px" onclick="menu();">
+		<div class="menu">
+			<li>ABOUT US</li>
+			<li>ACADEMICS</li>
+			<li>COURSES</li>
+			<li>ADMISSIONS</li>
+			<li>PLACEMENTS</li>
+		</div>
+	</div>
+	<nav>
+		<div class="logo-nav">
+			<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1200px-Hamburger_icon_white.svg.png" class="ham-menu" height="35px" onclick="menu();">
+			<img src="https://cdn.worldvectorlogo.com/logos/sa-logo-1.svg" class="logo" height="50px">
+		</div>
+		<div class="links">
+			<li>ABOUT US</li>
+			<li>ACADEMICS</li>
+			<li>COURSES</li>
+			<li>ADMISSIONS</li>
+			<li>PLACEMENTS</li>
+		</div>
+	</nav>
+
+	<div class="main-section">
+		<div class="awrd-img"><img src="https://freesvg.org/img/apogee_award_idea02.png.png" class="award" height="400px"></div>
+		<h1>
+			We provide the best student experience
+		</h1>
+
+
+	</div>
 </body>
 </html>
