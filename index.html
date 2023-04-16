@@ -3,42 +3,56 @@
 	<title>
 		Big School
 	</title>
-    <link rel="stylesheet" href="styles.css">
-	<script src="work.js"></script>
+	<style>
+		
+	@property --big-back{
+		syntax: "<angle>";
+		initial-value: 45deg;
+		inherits: false;
+	}
+	body{
+		transition: 0.5s;
+		background: 
+			linear-gradient(
+				var(--big-back),
+				red,
+				blue 
+			)
+			;
+		animation: rotate 5s infinite linear;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-attachment: sticky;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+		overflow: hidden;
+	}
+	@keyframes rotate{
+		from{
+			--big-back: 0deg;
+		}
+		to{
+			--big-back: 360deg;
+		}
+	}
+	</style>
+	<script>
+	let body = document.querySelector('body').style;
+	let x = 1;
+	function fun(){
+			body.backgroundImage = "url('https://picsum.photos/1920/1080?random="+x+"')";
+			console.log(x);
+			x++;
+	}
+
+	document.querySelector('body').addEventListener('click', () => {
+		fun();
+	});
+	</script>
 </head>
 <body>
-	<div class="cursor"></div>
-	<div class="menu-bar">
-		<img src="https://www.svgrepo.com/show/60423/cancel.svg" class="cancel" height="50px" onclick="menu();">
-		<div class="menu">
-			<li>ABOUT US</li>
-			<li>ACADEMICS</li>
-			<li>COURSES</li>
-			<li>ADMISSIONS</li>
-			<li>PLACEMENTS</li>
-		</div>
-	</div>										
-	<nav>
-		<div class="logo-nav">
-			<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/1200px-Hamburger_icon_white.svg.png" class="ham-menu" height="35px" onclick="menu();">
-			<img src="https://cdn.worldvectorlogo.com/logos/sa-logo-1.svg" class="logo" height="50px">
-		</div>
-		<div class="links">
-			<li>ABOUT US</li>
-			<li>ACADEMICS</li>
-			<li>COURSES</li>
-			<li>ADMISSIONS</li>
-			<li>PLACEMENTS</li>
-		</div>
-	</nav>
-
-	<div class="main-section">
-		<div class="awrd-img"><img src="https://freesvg.org/img/apogee_award_idea02.png.png" class="award" height="400px"></div>
-		<h1>
-			We provide the best student experience
-		</h1>
-
-
-	</div>
 </body>
 </html>
