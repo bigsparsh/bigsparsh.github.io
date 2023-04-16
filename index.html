@@ -46,8 +46,12 @@
 	let body = document.querySelector('body').style;
 	let x = 1;
 	function fun(){
+		if(window.innerWidth < 500){
+				body.backgroundImage = "url('https://picsum.photos/1080/1920?random="+x+"')";
+		}
+		else{
 			body.backgroundImage = "url('https://picsum.photos/1920/1080?random="+x+"')";
-			console.log(x);
+		}
 			x++;
 	}
 
