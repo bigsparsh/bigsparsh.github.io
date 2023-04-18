@@ -1,0 +1,374 @@
+* {
+	 user-select: none;
+	 font-size: 20px;
+	 font-family: Verdana;
+	 margin: 0;
+	 padding: 0;
+}
+ :link, :visited, :active {
+	 text-decoration: none;
+	 color: white;
+}
+ .flex {
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+}
+ .top-btn {
+	 cursor: pointer;
+	 display: none;
+	 position: fixed;
+	 height: 50px;
+	 width: 50px;
+	 bottom: 10px;
+	 right: 10px;
+	 border-radius: 10px;
+	 box-shadow: 0 0 10px black;
+	 background-color: #1f211f;
+	 opacity: 0.5;
+	 z-index: 1;
+	 transition: 0.5s;
+}
+ .top-btn:hover {
+	 opacity: 1;
+}
+ .top-btn .block1 {
+	 height: 5px;
+	 border-radius: 5px;
+	 width: 20px;
+	 transform: translateX(4.5px) rotateZ(-45deg);
+	 background-color: white;
+}
+ .top-btn .block2 {
+	 height: 5px;
+	 border-radius: 5px;
+	 width: 20px;
+	 transform: translateX(-4.5px) rotateZ(45deg);
+	 background-color: white;
+}
+ nav {
+	 display: flex;
+	 justify-content: space-between;
+	 align-items: center;
+	 background: rgba(0, 0, 0, 0.25);
+	 color: white;
+	 backdrop-filter: blur(5px);
+	 height: 100px;
+}
+ nav .logo-box {
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+}
+ nav .links {
+	 display: flex;
+	 flex-grow: 1;
+	 justify-content: space-evenly;
+	 align-items: center;
+}
+ nav .links li {
+	 list-style: none;
+	 text-transform: uppercase;
+}
+ nav .links li:after {
+	 transition: 0.5s;
+	 content: '';
+	 display: block;
+	 height: 5px;
+	 border-radius: 5px;
+	 width: 0%;
+	 background: white;
+	 transform: translateY(50%);
+	 margin: auto;
+}
+ nav .links li:hover:after {
+	 width: 100%;
+}
+ .section-1 {
+	 height: 100dvh;
+	 background-color: #6f736f;
+	 background-image: url('https://picsum.photos/1920/1080?random=1');
+	 background-attachment: fixed;
+	 background-size: cover;
+	 background-position: center;
+	 display: flex;
+	 background-blend-mode: multiply;
+	 flex-direction: column;
+	 justify-content: space-between;
+}
+ .section-1 .slogan {
+	 flex-grow: 1;
+	 font-weight: 100;
+	 font-size: 50px;
+	 text-align: center;
+	 height: 100%;
+	 color: white;
+	 padding: 10%;
+	 display: flex;
+	 flex-direction: column;
+	 justify-content: center;
+	 align-items: center;
+}
+ .section-1 .slogan span {
+	 display: block;
+	 font-size: 25px;
+	 font-style: italic;
+}
+ .section-1 .slogan .btn {
+	 transition: 0.15s;
+	 margin-top: 20px;
+	 border: 1px solid white;
+	 padding: 10px;
+	 font-size: 25px;
+	 font-weight: 1000;
+	 text-transform: uppercase;
+	 background: transparent;
+	 color: white;
+	 backdrop-filter: blur(5px);
+}
+ .section-1 .slogan .btn:hover {
+	 cursor: pointer;
+	 border: 1px solid white;
+	 transform: scale(1.1);
+}
+ .section-2 {
+	 height: 100dvh;
+	 overflow: hidden;
+	 display: flex;
+	 background-color: #1f211f;
+	 flex-direction: column;
+	 justify-content: space-between;
+}
+ .section-2 h1 {
+	 border-top: 10px solid white;
+	 text-align: center;
+	 color: white;
+	 text-transform: uppercase;
+	 letter-spacing: 10px;
+	 padding: 25px 0;
+	 font-size: 35px;
+	 font-weight: 100;
+}
+ .section-2 .about {
+	 display: grid;
+	 place-items: center;
+	 grid-template-columns: 1.5fr 2fr;
+	 flex-grow: 1;
+}
+ .section-2 .about .image-box {
+	 background: url('https://picsum.photos/1920/1080?random=2');
+	 background-attachment: fixed;
+	 background-size: cover;
+	 width: 100%;
+	 background-position: center;
+	 height: calc(100% - 1px);
+	 border-right: 1px solid white;
+	 border-top: 1px solid white;
+	 border-bottom: 1px solid white;
+}
+ .section-2 .about .text-box p {
+	 font-family: sans-serif;
+	 color: white;
+	 padding: 20px;
+	 font-size: 15px;
+	 font-weight: 100;
+}
+ .section-3 {
+	 height: 100dvh;
+	 display: flex;
+	 background-color: #1f211f;
+	 flex-direction: column;
+	 justify-content: space-between;
+}
+ .section-3 h1 {
+	 border-top: 10px solid white;
+	 text-align: center;
+	 color: white;
+	 text-transform: uppercase;
+	 letter-spacing: 10px;
+	 padding: 25px 0;
+	 font-size: 35px;
+	 font-weight: 100;
+}
+ .section-3 .course-cards {
+	 height: 100%;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+}
+ .section-3 .course-cards .cards {
+	 transition: 0.5s ease-out;
+	 height: 100%;
+	 background-color: #6f736f;
+	 background-blend-mode: multiply;
+	 background-attachment: fixed;
+	 background-size: cover;
+	 background-position: center;
+	 font-size: 25px;
+	 font-weight: 500;
+	 justify-content: space-evenly !important;
+	 color: white;
+	 flex-direction: column;
+	 flex: 1;
+}
+ .section-3 .course-cards .cards span {
+	 padding: 0 20px;
+	 display: none;
+	 opacity: 0;
+	 font-size: 1px;
+	 font-weight: 100;
+	 text-align: justify;
+	 font-family: sans-serif;
+}
+ .section-3 .course-cards .a {
+	 background-image: url('https://picsum.photos/1920/1080?random=3');
+}
+ .section-3 .course-cards .a:hover {
+	 flex: 2;
+	 background-image: url('https://picsum.photos/1920/1080?random=3'), linear-gradient(180deg, transparent, #1f211f);
+}
+ .section-3 .course-cards .a:hover span {
+	 opacity: 1;
+	 font-size: 15px;
+	 display: block;
+}
+ .section-3 .course-cards .b {
+	 background-image: url('https://picsum.photos/1920/1080?random=4');
+}
+ .section-3 .course-cards .b:hover {
+	 flex: 2;
+	 background-image: url('https://picsum.photos/1920/1080?random=4'), linear-gradient(180deg, transparent, #1f211f);
+}
+ .section-3 .course-cards .b:hover span {
+	 opacity: 1;
+	 font-size: 15px;
+	 display: block;
+}
+ .section-3 .course-cards .c {
+	 background-image: url('https://picsum.photos/1920/1080?random=5');
+}
+ .section-3 .course-cards .c:hover {
+	 background-image: url('https://picsum.photos/1920/1080?random=5'), linear-gradient(180deg, transparent, #1f211f);
+	 flex: 2;
+}
+ .section-3 .course-cards .c:hover span {
+	 font-size: 15px;
+	 opacity: 1;
+	 display: block;
+}
+ .section-3 .course-cards .d {
+	 background-image: url('https://picsum.photos/1920/1080?random=6');
+}
+ .section-3 .course-cards .d:hover {
+	 flex: 2;
+	 background-image: url('https://picsum.photos/1920/1080?random=6'), linear-gradient(180deg, transparent, #1f211f);
+}
+ .section-3 .course-cards .d:hover span {
+	 opacity: 1;
+	 font-size: 15px;
+	 display: block;
+}
+ .section-4 {
+	 flex-direction: column;
+	 height: 100dvh;
+	 background-color: #1f211f;
+	 background-image: url('https://picsum.photos/1920/1080?random=7');
+	 background-blend-mode: overlay;
+	 background-attachment: fixed;
+	 background-size: cover;
+	 background-position: center;
+}
+ .section-4 h1 {
+	 border-top: 10px solid white;
+	 background: rgba(255, 255, 255, 0.25);
+	 backdrop-filter: blur(5px);
+	 width: 100%;
+	 text-align: center;
+	 color: white;
+	 text-transform: uppercase;
+	 letter-spacing: 10px;
+	 padding: 25px 0;
+	 font-size: 35px;
+	 font-weight: 100;
+}
+ .section-4 .fac-cards {
+	 justify-content: space-evenly;
+	 align-items: space-evenly;
+	 height: 100%;
+	 width: 100%;
+	 flex-grow: 1;
+	 flex-wrap: wrap;
+}
+ .section-4 .fac-cards .card {
+	 height: 200px;
+	 font-size: 30px;
+	 font-weight: 200;
+	 color: white;
+	 width: 200px;
+	 flex-direction: column;
+	 border: 1px solid white;
+	 position: relative;
+}
+ .section-4 .fac-cards .card span {
+	 font-weight: 100;
+	 font-style: italic;
+}
+ .section-4 .fac-cards .card .profile-img {
+	 height: 100px;
+	 width: 100px;
+	 border-radius: 100%;
+	 position: absolute;
+	 border: 1px solid white;
+	 top: -50px;
+}
+ .section-4 .fac-cards .card .a {
+	 background-image: url('https://picsum.photos/100/100?random=8');
+}
+ .section-4 .fac-cards .card .b {
+	 background-image: url('https://picsum.photos/100/100?random=9');
+}
+ .section-4 .fac-cards .card .c {
+	 background-image: url('https://picsum.photos/100/100?random=10');
+}
+ .section-5 {
+	 flex-direction: column;
+	 height: 100dvh;
+	 background-color: #1f211f;
+}
+ .section-5 h1 {
+	 font-weight: 1000;
+	 width: 100%;
+	 text-align: center;
+	 color: white;
+	 text-transform: uppercase;
+	 letter-spacing: 10px;
+	 padding: 25px 0;
+	 font-size: 35px;
+	 border-top: 10px solid white;
+}
+ .section-5 .contact {
+	 flex-direction: column;
+	 flex-grow: 1;
+	 background-color: #1f211f;
+	 background-image: url('https://picsum.photos/1920/1080?random=11');
+	 background-blend-mode: overlay;
+	 background-attachment: fixed;
+	 background-size: cover;
+	 background-position: center;
+	 background-opacity: 0.4;
+	 width: 100%;
+}
+ .section-5 .contact p {
+	 font-size: 30px;
+	 font-weight: 1000;
+	 margin: 10px;
+	 color: white;
+}
+ .section-5 .contact p span {
+	 font-weight: 100;
+	 font-size: 30px;
+}
+ ::-webkit-scrollbar {
+	 display: none;
+}
+ 
