@@ -1,63 +1,104 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<title>
-		Big School
-	</title>
-	<style>
-		
-	@property --big-back{
-		syntax: "<angle>";
-		initial-value: 45deg;
-		inherits: false;
-	}
-	body{
-		transition: 0.5s;
-		background: 
-			linear-gradient(
-				var(--big-back),
-				red,
-				blue 
-			)
-			;
-		animation: rotate 5s infinite linear;
-		background-size: cover;
-		background-position: center;
-		background-repeat: no-repeat;
-		background-attachment: sticky;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		height: 100dvh;
-		overflow: hidden;
-	}
-	@keyframes rotate{
-		from{
-			--big-back: 0deg;
-		}
-		to{
-			--big-back: 360deg;
-		}
-	}
-	</style>
-	
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
 </head>
 <body>
-	<script>
-	let body = document.querySelector('body').style;
-	let x = 1;
-	function fun(){
-		if(window.innerWidth < 500){
-				body.backgroundImage = "url('https://picsum.photos/1080/1920?random="+x+"')";
-		}
-		else{
-			body.backgroundImage = "url('https://picsum.photos/1920/1080?random="+x+"')";
-		}
-			x++;
-	}
+	<div class="top-btn flex">
+	<div class="block1"></div>
+	<div class="block2"></div>
+</div>
+<div class="section-1" id="sec1">
+	<nav>
+		<div class="logo-box">
+			<img src="//picsum.photos/75/75">
+		</div>
+		<div class="links">
+			<li><a href="#sec2">About Us</a></li>
+			<li><a href="#sec3">Courses</a></li>
+			<li><a href="#sec4">Faculty</a></li>
+			<li><a href="#sec5">Contact Us</a></li>
+		</div>
+	</nav>
+	<div class="slogan">
+		Providing the best student experience
+		<span> Since 2003 </span>
+		<button class="btn">Register Now</button>
+	</div>
+</div>
 
-	document.querySelector('body').addEventListener('click', () => {
-		fun();
-	});
-	</script>
+<div class="section-2" id="sec2">
+	<h1>	About Us  </h1>
+	<div class="about">
+		<div class="image-box"></div>
+		<div class="text-box">
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos mollitia, provident impedit recusandae totam minima voluptatum non quidem, nemo at molestiae ex, iusto autem distinctio in delectus sunt harum! Dolor maxime porro ducimus perspiciatis molestias corrupti laborum eaque quia deleniti praesentium. 
+			</p>
+			<p>
+				Impedit vel illo nesciunt aperiam quos asperiores quis cupiditate dignissimos tempora fuga. Adipisci dignissimos sapiente ipsum reiciendis mollitia, sint odit qui impedit molestias, ut aperiam id amet, quidem aliquam suscipit quas? Maxime temporibus corrupti nulla modi est consequuntur in laboriosam, facere illo vel tempore nam maiores quas necessitatibus asperiores veniam quae unde assumenda, animi, ut minima! Id, ipsum culpa.
+			</p>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, dolor maxime autem illum deleniti fuga aliquam! Deleniti vel nihil quaerat?
+			</p>
+		</div>
+	</div>
+</div>
+
+<div class="section-3" id="sec3">
+	<h1>	Courses 	</h1>
+	<div class="course-cards">
+		<div class="cards flex a">
+			B. Tech
+			<span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi deserunt sunt ex excepturi sit eligendi quia consequatur perferendis pariatur dolorem voluptatum ratione quidem omnis aperiam, nobis ea error rem, illo necessitatibus culpa. Nulla nisi non, asperiores laboriosam quis eligendi perspiciatis!</span>	
+		</div>
+		<div class="cards flex b">
+			Diploma
+			<span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi deserunt sunt ex excepturi sit eligendi quia consequatur perferendis pariatur dolorem voluptatum ratione quidem omnis aperiam, nobis ea error rem, illo necessitatibus culpa. Nulla nisi non, asperiores laboriosam quis eligendi perspiciatis!</span>	
+		</div>
+		<div class="cards flex c">
+			BCA
+			<span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi deserunt sunt ex excepturi sit eligendi quia consequatur perferendis pariatur dolorem voluptatum ratione quidem omnis aperiam, nobis ea error rem, illo necessitatibus culpa. Nulla nisi non, asperiores laboriosam quis eligendi perspiciatis!</span>	
+		</div>
+		<div class="cards flex d">
+			MCA
+			<span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi deserunt sunt ex excepturi sit eligendi quia consequatur perferendis pariatur dolorem voluptatum ratione quidem omnis aperiam, nobis ea error rem, illo necessitatibus culpa. Nulla nisi non, asperiores laboriosam quis eligendi perspiciatis!</span>	
+		</div>
+	</div>
+</div>
+
+
+<div class="section-4 flex" id="sec4">
+	<h1>Faculty</h1>
+	<div class="fac-cards flex">
+		<div class="card flex">
+			<div class="profile-img a"></div>
+			BatMan
+			<span>Cheif Something</span>
+		</div>
+		<div class="card flex">
+			<div class="profile-img b"></div>
+			SuperMan
+			<span>Vice Something</span>
+		</div>
+		<div class="card flex">
+			<div class="profile-img c"></div>
+			Joker
+			<span>CEO Something</span>
+		</div>
+	</div>
+</div>
+
+<div class="section-5 flex" id="sec5">
+	<h1>Contact us </h1>
+	<div class="contact flex">
+		<p>Email: <span>School@gmail.com</span></p>
+		<p>Phone: <span>91+ 2432452355</span></p>
+		<p>Address: <span>21 Bleeker Street</span></p>
+	</div>
+</div>
 </body>
 </html>
