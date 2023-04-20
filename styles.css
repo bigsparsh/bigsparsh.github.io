@@ -115,6 +115,8 @@
 	 font-style: italic;
 }
  .section-1 .slogan .btn {
+	 cursor: pointer;
+	 overflow: hidden;
 	 transition: 0.15s;
 	 margin-top: 20px;
 	 border: 1px solid white;
@@ -126,10 +128,25 @@
 	 color: white;
 	 backdrop-filter: blur(5px);
 }
- .section-1 .slogan .btn:hover {
-	 cursor: pointer;
-	 border: 1px solid white;
-	 transform: scale(1.1);
+ .section-1 .slogan .btn:after {
+	 opacity: 0.5;
+	 transition: 1s;
+	 height: 125px;
+	 width: 50px;
+	 background-color: white;
+	 position: absolute;
+	 left: -35%;
+	 top: -65%;
+	 transform: rotateZ(-45deg);
+	 content: '';
+}
+ .section-1 .slogan .btn:hover:after {
+	 animation: slide 1s;
+}
+ @keyframes slide {
+	 to {
+		 transform: translateX(400px) rotateZ(-45deg);
+	}
 }
  .section-2 {
 	 height: 100dvh;
@@ -195,27 +212,31 @@
 	 display: flex;
 	 justify-content: center;
 	 align-items: center;
+	 flex-direction: column;
 }
  .section-3 .course-cards .cards {
 	 transition: 0.5s ease-out;
-	 height: 100%;
+	 width: 100%;
+	 letter-spacing: -3px;
 	 background-color: #6f736f;
 	 background-blend-mode: multiply;
 	 background-attachment: fixed;
 	 background-size: cover;
 	 background-position: center;
-	 font-size: 25px;
-	 font-weight: 500;
+	 font-size: 30px;
+	 font-weight: 900;
 	 justify-content: space-evenly !important;
 	 color: white;
 	 flex-direction: column;
 	 flex: 1;
 }
  .section-3 .course-cards .cards span {
+	 letter-spacing: 0;
 	 padding: 0 20px;
 	 display: none;
 	 opacity: 0;
 	 font-size: 1px;
+	 width: 50%;
 	 font-weight: 100;
 	 text-align: justify;
 	 font-family: sans-serif;
@@ -336,7 +357,7 @@
 	 background-color: #1f211f;
 }
  .section-5 h1 {
-	 font-weight: 1000;
+	 font-weight: 100;
 	 width: 100%;
 	 text-align: center;
 	 color: white;
