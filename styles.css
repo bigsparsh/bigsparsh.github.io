@@ -9,9 +9,6 @@
 	 text-decoration: none;
 	 color: white;
 }
- body {
-	 overflow-x: hidden;
-}
  .form-back {
 	 z-index: 2;
 	 transition: 0.5s;
@@ -133,6 +130,7 @@
 	 background-color: white;
 }
  nav {
+	 overflow-x: hidden;
 	 display: flex;
 	 justify-content: space-between;
 	 align-items: center;
